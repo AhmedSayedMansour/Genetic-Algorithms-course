@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.IOException;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -101,9 +103,39 @@ public class GA_Solution {
         }
     }
 
-    public void nonUniformMutation()
+    public void nonUniformMutation(int numberOfGenes , ArrayList<Float> lower , ArrayList<Float> upper)
     {
+        Random rand = new Random();
+        float theta;
+        float ri1, r;
+        boolean thetaL ,thetaU;
 
+        for(int i=0 ; i<selected.size() ; i++)
+        {
+            for (int j = 0; j < numberOfGenes; j++)
+            {
+                thetaL = thetaU = false;
+                ri1 = rand.nextFloat();
+
+                if(ri1 <= 0.5)
+                {
+                    thetaL = true;
+                    theta = selected.get(i).genes[j] - lower.get(j);
+                }
+                else
+                {
+                    thetaU = true;
+                    theta = upper.get(j) - selected.get(i).genes[j];
+                }
+
+                r = rand.nextFloat();
+                double power = 1 - (i/selected.size()*2);
+                double addingValue = (float)(theta * ( 1 - (Math.pow(r,power))));
+
+                if(thetaL) selected.get(i).genes[j] -= addingValue;
+                else selected.get(i).genes[j] += addingValue;
+            }
+        }
     }
 
     /// Check and Fix Invisible Solutions
@@ -166,7 +198,7 @@ public class GA_Solution {
         }
     }
 
-    public void showBest(ArrayList<Chromosome> generations, ArrayList<Float> generationsFitness, ArrayList<String> names, ArrayList<Float> rois)
+    public void showBest(ArrayList<Chromosome> generations, ArrayList<Float> generationsFitness, ArrayList<String> names, ArrayList<Float> rois, int iterate) throws IOException
     {
         int numberOfGenes = generations.get(0).genes.length;
         float bestFitness = 0.0f;
@@ -183,13 +215,20 @@ public class GA_Solution {
         System.out.println("Please wait while running the GA…\n" + "The final marketing budget allocation is:");
 
         Float totalProfit = 0.0f;
+        String output = "";
         for(int j=0; j<numberOfGenes ; j++)
         {
             totalProfit += (generations.get(index).genes[j] / 100) * rois.get(j);
-            System.out.println(names.get(j) + " -> " + generations.get(index).genes[j]);
+            System.out.println(names.get(j) + " -> " + generations.get(index).genes[j]+"K");
+            output += names.get(j) + " -> " + generations.get(index).genes[j]+ "K" + "\n";
         }
+        System.out.println("The total profit is : " + totalProfit + "K" + "\n\n");
 
-        System.out.println("The total profit is : " + totalProfit);
+        ///Write To File
+        output += "The total profit is : " + totalProfit+ "K" + "\n\n\n";
+        WriteToFile file = new WriteToFile();
+        if(iterate == 1) file.clear();
+        file.write(output , iterate);
     }
 
 }

@@ -1,11 +1,13 @@
 package com.company;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Float marketingTarget;
         int numberOfChannels;
         ArrayList<String> channelsNames = new ArrayList<>();
@@ -54,16 +56,19 @@ public class Main {
 
         GA_Solution solution = new GA_Solution();
 
-        for(int i=0 ; i<50 ; i++)
+        for(int j=0 ; j<20 ; j++)
         {
-            generationsFitness = solution.calculateFitness(generation, rois);
-            solution.rouletteWheelSelection(generation ,generationsFitness);
-            solution.towPointCrossover(numberOfChannels);
-            solution.uniformMutation(numberOfChannels, lower, upper);
-            solution.checkSelected(marketingTarget);
-            solution.elitistReplacement(generation, generationsFitness, rois);
+            for(int i=0 ; i<50 ; i++)
+            {
+                generationsFitness = solution.calculateFitness(generation, rois);
+                solution.rouletteWheelSelection(generation ,generationsFitness);
+                solution.towPointCrossover(numberOfChannels);
+                solution.nonUniformMutation(numberOfChannels, lower, upper);
+                solution.checkSelected(marketingTarget);
+                solution.elitistReplacement(generation, generationsFitness, rois);
+            }
+            solution.showBest(generation, generationsFitness , channelsNames , rois , j+1);
         }
-        solution.showBest(generation, generationsFitness , channelsNames , rois);
 
     }
 }
