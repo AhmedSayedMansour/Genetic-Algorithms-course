@@ -1,0 +1,160 @@
+Iterate number : 1
+tv -> 33.940308
+google -> 23.622416
+twitter -> 8.1621275
+facebook -> 33.631912
+The total profit is : 9.820774
+
+
+Iterate number : 2
+tv -> 28.900948
+google -> 28.31475
+twitter -> 13.901096
+facebook -> 28.104805
+The total profit is : 9.774451
+
+
+Iterate number : 3
+tv -> 26.801716
+google -> 27.226624
+twitter -> 17.760145
+facebook -> 27.247948
+The total profit is : 9.651816
+
+
+Iterate number : 4
+tv -> 17.811443
+google -> 28.15487
+twitter -> 17.898129
+facebook -> 10.078009
+The total profit is : 7.16495
+
+
+Iterate number : 5
+tv -> 7.6410947
+google -> 25.056004
+twitter -> 9.658545
+facebook -> 57.498
+The total profit is : 10.618887
+
+
+Iterate number : 6
+tv -> 40.71658
+google -> 32.648952
+twitter -> 0.23399472
+facebook -> 26.137394
+The total profit is : 10.066693
+
+
+Iterate number : 7
+tv -> 3.5950792
+google -> 22.156204
+twitter -> 7.8020496
+facebook -> 10.078905
+The total profit is : 4.601174
+
+
+Iterate number : 8
+tv -> 31.587265
+google -> 32.330986
+twitter -> 6.4915614
+facebook -> 29.460455
+The total profit is : 10.101758
+
+
+Iterate number : 9
+tv -> 31.467594
+google -> 21.792908
+twitter -> 0.06884742
+facebook -> 18.698189
+The total profit is : 7.1941767
+
+
+Iterate number : 10
+tv -> 19.67363
+google -> 37.517387
+twitter -> 5.6689215
+facebook -> 36.824226
+The total profit is : 10.523466
+
+
+Iterate number : 11
+tv -> 29.367039
+google -> 22.420197
+twitter -> 17.722164
+facebook -> 29.970123
+The total profit is : 9.577051
+
+
+Iterate number : 12
+tv -> 19.978325
+google -> 31.320198
+twitter -> 16.645962
+facebook -> 31.164162
+The total profit is : 9.949965
+
+
+Iterate number : 13
+tv -> 5.126009
+google -> 76.494675
+twitter -> 1.2938468
+facebook -> 16.091616
+The total profit is : 11.450089
+
+
+Iterate number : 14
+tv -> 2.8552513
+google -> 80.909966
+twitter -> 3.6808615
+facebook -> 12.418215
+The total profit is : 11.56128
+
+
+Iterate number : 15
+tv -> 2.7001054
+google -> 47.067657
+twitter -> 2.875552
+facebook -> 46.91088
+The total profit is : 11.225614
+
+
+Iterate number : 16
+tv -> 4.4579697
+google -> 43.485588
+twitter -> 8.321873
+facebook -> 43.39808
+The total profit is : 10.931228
+
+
+Iterate number : 17
+tv -> 26.652447
+google -> 30.26133
+twitter -> 12.226116
+facebook -> 30.137203
+The total profit is : 9.934476
+
+
+Iterate number : 18
+tv -> 4.540233
+google -> 41.52877
+twitter -> 11.270784
+facebook -> 41.915154
+The total profit is : 10.746293
+
+
+Iterate number : 19
+tv -> 2.7176337
+google -> 68.58016
+twitter -> 0.5109371
+facebook -> 27.30463
+The total profit is : 11.486306
+
+
+Iterate number : 20
+tv -> 2.8761637
+google -> 43.114346
+twitter -> 1.3448223
+facebook -> 52.430405
+The total profit is : 11.265297
+
+
